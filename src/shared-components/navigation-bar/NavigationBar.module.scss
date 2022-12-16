@@ -1,11 +1,12 @@
 @import '../../styles/variables';
 
-
 .nav {
-
     &__container {
+        position: relative;
+        z-index: 20;
         height: 40px;
         background-color: $purple;
+        box-shadow: 0 0 12px 2px $purple;
     }
 
     &__items {
