@@ -1,0 +1,28 @@
+@import 'src/styles/variables';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    gap: 22px;
+    text-align: center;
+}
+
+.label {
+    color: $white;
+    font-size: $font-32;
+}
+
+.emoji {
+    width: 30%;
+}
+
+.takeAgainBtn {
+    color: $grey-300;
+    font-size: $font-22;
+    border-radius: 6px;
+    padding: 10px 20px;
+}

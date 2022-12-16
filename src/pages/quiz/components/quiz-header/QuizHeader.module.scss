@@ -1,0 +1,20 @@
+@import 'src/styles/variables';
+
+.counter {
+    color: $white;
+    font-size: $font-18;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.numberOfQuestion {
+    font-size: $font-22;
+    font-weight: 700;
+}
+
+.timerContainer {
+    border: 1px solid $blue-200;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(to right, $blue-100, $white-200, $white-100);
+}

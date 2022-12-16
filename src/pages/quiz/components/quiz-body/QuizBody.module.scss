@@ -1,0 +1,25 @@
+@import 'src/styles/variables';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    color: $white;
+    font-size: $font-22;
+    font-weight: 800;
+}
+
+.answersContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.question {
+    color: #ffffff;
+    font-size: $font-26;
+}

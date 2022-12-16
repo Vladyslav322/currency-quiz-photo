@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+.progressBar {
+    height: 12px;
+    transition: width 1s linear, background-color 2s ease-in-out;
+}
+
+.progress-good {
+    background-color: $green;
+}
+
+.progress-alert {
+    background-color: $orange;
+}
+
+.progress-danger {
+    background-color: $red;
+}
+
