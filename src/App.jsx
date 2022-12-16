@@ -1,4 +1,3 @@
-import './App.scss';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { CurrencyExchange, PhotoGramm, QuizApp } from './pages'
 import { ROUTES } from './constants/router';
