@@ -5,13 +5,14 @@
 .nav {
 
     &__container {
+        height: 40px;
         background-color: lightslategray;
     }
 
     &__items {
         display: flex;
         justify-content: space-around;
-        padding: 30px;
+        padding: 10px;
     }
 
     &__item {
