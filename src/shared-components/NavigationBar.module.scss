@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+
+
+.nav {
+
+    &__container {
+        height: 40px;
+        background-color: $purple;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    &__item {
+        color: $white;
+        font-size: $font-18;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
