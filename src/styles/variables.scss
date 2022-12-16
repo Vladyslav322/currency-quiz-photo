@@ -1,17 +1,28 @@
 /* Font sizes */
-$font-s: 10px;
-$font-base: 14px;
-$font-m: 20px;
-$font-l: 28px;
-$font-xl: 40px;
-$font-xxl: 60px;
+$font-18: 18px;
+$font-20: 20px;
+$font-22: 22px;
+$font-26: 26px;
+$font-28: 28px;
+$font-32: 32px;
+$font-36: 36px;
+$font-60: 60px;
 
 /* Colors */
 $white: #ffffff;
+$white-100: rgba(255, 255, 255, 0.2);
+$white-200: rgba(255, 255, 255, 0.4);
 $grey-100: #e6e6e6;
 $grey-200: #7b7b7b;
 $grey-300: #393939;
 $purple: #5979fd;
-
-/* Screen sizes */
-$screen-size-s: 640px;
+$purple-100: #7474bf;
+$purple-100-100: rgba(116, 116, 191, 0.5);
+$blue-100: #4b6cb7;
+$blue-200: #314876;
+$blue-300: #348ac7;
+$blue-300-100: #edf0f1;
+$blue-400: #182848;
+$red: #ff0000;
+$orange: #ffcc00;
+$green: #00e100;
