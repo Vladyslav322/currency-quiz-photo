@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ROUTES } from '../constants/router';
+import { ROUTES } from '../../constants/router';
 import classes from './NavigationBar.module.scss';
 
 const NavigationBar = () => {
