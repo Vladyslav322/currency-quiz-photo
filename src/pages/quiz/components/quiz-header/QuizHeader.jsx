@@ -12,7 +12,11 @@ const QuizHeader = ({ currentQuestion, allQuestions, timeoutCallback }) => {
     return (
         <Fragment>
             <div className={ classes.timerContainer }>
-                <Timer seconds={ TIMEOUT_DURATION } timeoutCallback={ timeoutCallback } shouldRerender={ {} }/>
+                <Timer
+                    seconds={ TIMEOUT_DURATION }
+                    timeoutCallback={ timeoutCallback }
+                    shouldRerender={ {} }
+                />
             </div>
 
             <h1 className={ classes.counter }>
