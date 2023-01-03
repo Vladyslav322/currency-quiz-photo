@@ -1,13 +1,10 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import Timer from '../timer/Timer';
 import classes from './QuizHeader.module.scss';
 
 const TIMEOUT_DURATION = 10;
 
 const QuizHeader = ({ currentQuestion, allQuestions, timeoutCallback }) => {
-    const [currentNumber, setCurrentNumber] = useState();
-
-    useEffect(() => setCurrentNumber(currentQuestion), [currentQuestion]);
 
     return (
         <Fragment>
@@ -20,7 +17,7 @@ const QuizHeader = ({ currentQuestion, allQuestions, timeoutCallback }) => {
             </div>
 
             <h1 className={ classes.counter }>
-                <span className={ classes.numberOfQuestion }>{ currentNumber }</span>
+                <span className={ classes.numberOfQuestion }>{ currentQuestion }</span>
                 &nbsp;of&nbsp;
                 <span className={ classes.numberOfQuestion }>{ allQuestions }</span>
             </h1>
