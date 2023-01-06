@@ -7,9 +7,11 @@ import NotFound from '../not-found/NotFound';
 import Pagination from '../pagination/Pagination';
 import {
     allDisplayedImagesSelector,
-    categoriesSelector, displayedImagesOnPageSelector,
+    categoriesSelector,
+    displayedImagesOnPageSelector,
     filteredImagesSelector,
-    imagesSelector, pageSelector,
+    imagesSelector,
+    pageSelector,
     searchedImagesSelector
 } from '../../redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';

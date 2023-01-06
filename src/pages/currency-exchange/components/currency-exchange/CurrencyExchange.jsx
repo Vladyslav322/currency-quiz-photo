@@ -20,7 +20,7 @@ const CurrencyExchange = () => {
     const currencyRates = useSelector(currencyRatesSelector);
 
     const currencyFrom = useSelector(currencyFromSelector);
-    const currencyTo= useSelector(currencyToSelector);
+    const currencyTo = useSelector(currencyToSelector);
 
     const [labelFrom, setLabelFrom] = useState();
     const [labelTo, setLabelTo] = useState();
