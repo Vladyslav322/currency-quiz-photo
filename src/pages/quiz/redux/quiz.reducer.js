@@ -1,28 +1,29 @@
 import { QUIZ } from '../constants';
+import { actionTypes } from './actionsType';
 
 const initState = {
-    quiz: QUIZ,
+    data: QUIZ,
     totalScore: 0,
     currentQuestionIndex: 0,
 };
 
-function reducer(state = initState, action) {
+function reducerQuiz(state = initState, action) {
     switch (action.type) {
-        case 'ADD_TOTAL_SCORE': {
+        case actionTypes.addTotalScore: {
             return {
                 ...state,
                 totalScore: state.totalScore + 1,
             }
         }
 
-        case 'CHANGE_QUESTION': {
+        case actionTypes.changeQuestion: {
             return {
                 ...state,
                 currentQuestionIndex: state.currentQuestionIndex + 1,
             }
         }
 
-        case 'TAKE_QUIZ_AGAIN': {
+        case actionTypes.takeQuizAgain: {
             return {
                 ...state,
                 totalScore: 0,
@@ -36,4 +37,4 @@ function reducer(state = initState, action) {
     }
 }
 
-export default reducer;
+export default reducerQuiz;

@@ -4,7 +4,7 @@ import QuizHeader from '../quiz-header/QuizHeader';
 import QuizBody from '../quiz-body/QuizBody';
 import QuizResult from '../quiz-result/QuizResult';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTotalScore, changeQuestion, takeQuizAgain } from '../../redux/actionsQuiz';
+import { addTotalScore, changeQuestion, takeQuizAgain } from '../../redux/actions';
 import { currentQuestionSelector, quizSelector, totalScoreSelector } from '../../redux/selectors';
 
 const Quiz = () => {
