@@ -6,7 +6,9 @@ export function toFixed(value) {
     const [beforePoint, afterPoint] = value.split('.');
 
     if (afterPoint) {
-        return `${ beforePoint }.${ afterPoint.slice(0, 2) }`;
+        const num = `${ beforePoint }.${ afterPoint.slice(0, 2) }`;
+
+        return parseFloat(num).toString();
     }
 
     return value;

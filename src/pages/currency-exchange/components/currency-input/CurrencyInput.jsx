@@ -22,7 +22,7 @@ const CurrencyInput = ({ label, currentValue = '', valueChangeCallback }) => {
 
         setInputValue(value);
         valueChangeCallback(value);
-    }
+    };
 
     useEffect(() => {
         const value = toFixed(currentValue.toString());

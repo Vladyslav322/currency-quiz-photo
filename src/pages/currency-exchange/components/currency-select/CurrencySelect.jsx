@@ -13,7 +13,7 @@ const CurrencySelect = ({ items, itemClickCallback, defaultSelectedValue }) => {
     const itemClick = (value, inputIndex) => {
         changeInputValues(inputIndex);
         itemClickCallback(value);
-    }
+    };
 
     const changeInputValues = (inputIndex) => {
         const newValues = inputValues.map((_, index) => {

@@ -7,7 +7,7 @@ const Search = ({ data, selectorCallback, searchDataCallback }) => {
 
     const changeSearch = (event) => {
         setSearchValue(event.target.value);
-    }
+    };
 
     useEffect(() => {
         if (searchValue) {

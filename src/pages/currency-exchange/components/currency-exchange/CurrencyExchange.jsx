@@ -3,12 +3,24 @@ import classes from './CurrencyExchange.module.scss';
 import CurrencySelect from '../currency-select/CurrencySelect';
 import CurrencyInput from '../currency-input/CurrencyInput';
 import CustomButton from '../currency-button/CurrencyButton';
-import { CURRENCIES, CURRENCY_RATES } from '../../constants';
 import { buildExchangeLabel, buildRateKey } from '../../utils';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeCurrencyFrom, changeCurrencyFTo, reverseCurrencies } from '../../redux/actions';
+import {
+    allCurrenciesSelector,
+    currencyFromSelector,
+    currencyRatesSelector,
+    currencyToSelector
+} from '../../redux/selectors';
 
 const CurrencyExchange = () => {
-    const [currencyFrom, setCurrencyFrom] = useState(CURRENCIES.uah);
-    const [currencyTo, setCurrencyTo] = useState(CURRENCIES.usd);
+    const dispatch = useDispatch();
+
+    const allCurrencies = useSelector(allCurrenciesSelector);
+    const currencyRates = useSelector(currencyRatesSelector);
+
+    const currencyFrom = useSelector(currencyFromSelector);
+    const currencyTo= useSelector(currencyToSelector);
 
     const [labelFrom, setLabelFrom] = useState();
     const [labelTo, setLabelTo] = useState();
@@ -16,13 +28,7 @@ const CurrencyExchange = () => {
     const [amountFrom, setAmountFrom] = useState();
     const [amountTo, setAmountTo] = useState();
 
-    const reverseCurrencies = () => {
-        const from = currencyFrom;
-        const to = currencyTo;
-
-        setCurrencyFrom(to);
-        setCurrencyTo(from);
-    };
+    const handleReverseCurrencies = () => dispatch(reverseCurrencies());
 
     const currencyFromChange = (amount) => {
         setAmountFrom(amount);
@@ -30,7 +36,7 @@ const CurrencyExchange = () => {
         if (!amount) {
             setAmountTo('');
         } else {
-            const rate = currencyFrom === currencyTo ? 1 : CURRENCY_RATES[buildRateKey(currencyFrom, currencyTo)];
+            const rate = currencyFrom === currencyTo ? 1 : currencyRates[buildRateKey(currencyFrom, currencyTo)];
             const amountTo = amount * rate;
 
             setAmountTo(amountTo);
@@ -43,12 +49,15 @@ const CurrencyExchange = () => {
         if (!amount) {
             setAmountFrom('');
         } else {
-            const rate = CURRENCY_RATES[buildRateKey(currencyTo, currencyFrom)];
+            const rate = currencyRates[buildRateKey(currencyTo, currencyFrom)];
             const amountFrom = amount * rate;
 
             setAmountFrom(amountFrom);
         }
     };
+
+    const setCurrencyFrom = (currency) => dispatch(changeCurrencyFrom(currency));
+    const setCurrencyTo = (currency) => dispatch(changeCurrencyFTo(currency));
 
     useEffect(() => {
         setLabelFrom(buildExchangeLabel(currencyFrom, currencyTo));
@@ -61,9 +70,9 @@ const CurrencyExchange = () => {
         <div className={ classes.container }>
             <div className={ classes.currencyExchange }>
                 <CurrencySelect
-                    items={ CURRENCIES }
+                    items={ allCurrencies }
                     defaultSelectedValue={ currencyFrom }
-                    itemClickCallback={ (currency) => setCurrencyFrom(currency) }
+                    itemClickCallback={ setCurrencyFrom.bind(this) }
                 />
 
                 <CurrencyInput
@@ -74,14 +83,14 @@ const CurrencyExchange = () => {
             </div>
 
             <div className={ classes.reverseBtn }>
-                <CustomButton clickCallback={ reverseCurrencies }/>
+                <CustomButton clickCallback={ handleReverseCurrencies }/>
             </div>
 
             <div className={ classes.currencyExchange }>
                 <CurrencySelect
-                    items={ CURRENCIES }
+                    items={ allCurrencies }
                     defaultSelectedValue={ currencyTo }
-                    itemClickCallback={ (currency) => setCurrencyTo(currency) }
+                    itemClickCallback={ setCurrencyTo.bind(this) }
                 />
 
                 <CurrencyInput

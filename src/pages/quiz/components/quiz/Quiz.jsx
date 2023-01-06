@@ -1,52 +1,53 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import classes from './Quiz.module.scss';
 import QuizHeader from '../quiz-header/QuizHeader';
 import QuizBody from '../quiz-body/QuizBody';
-import { QUIZ } from '../../constants';
 import QuizResult from '../quiz-result/QuizResult';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTotalScore, changeQuestion, takeQuizAgain } from '../../redux/actions';
+import { currentQuestionSelector, quizSelector, totalScoreSelector } from '../../redux/selectors';
 
 const Quiz = () => {
-    const [totalScore, setTotalScore] = useState(0);
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const quiz = useSelector(quizSelector);
+    const totalScore = useSelector(totalScoreSelector);
+    const currentQuestionIndex = useSelector(currentQuestionSelector);
+    const dispatch = useDispatch();
 
-    const nextQuestion = () => setCurrentQuestionIndex(currentQuestionIndex + 1);
+    const nextQuestion = () => dispatch(changeQuestion());
 
     const timeout = () => nextQuestion();
 
     const selectAnswer = (answer) => {
         if (answer.isCorrect) {
-            setTotalScore((previousValue) => previousValue + 1);
+            dispatch(addTotalScore());
         }
 
         nextQuestion();
     };
 
-    const takeQuizAgain = () => {
-        setTotalScore(0);
-        setCurrentQuestionIndex(0);
-    };
+    const handlerTakeQuizAgain = () => dispatch(takeQuizAgain());
 
     return (
         <div className={ classes.container }>
             {
-                currentQuestionIndex === QUIZ.length ? (
+                currentQuestionIndex === quiz.length ? (
                     <QuizResult
                         amountOfCorrectAnswers={ totalScore }
-                        allQuestions={ QUIZ.length }
-                        takeQuizAgainCallback={ takeQuizAgain }
+                        allQuestions={ quiz.length }
+                        takeQuizAgainCallback={ handlerTakeQuizAgain }
                     />
                 ) : (
                     <Fragment>
                         <QuizHeader
                             currentQuestion={ currentQuestionIndex + 1 }
-                            allQuestions={ QUIZ.length }
+                            allQuestions={ quiz.length }
                             timeoutCallback={ timeout }
                         />
 
                         <div className={ classes.quizBody }>
                             <QuizBody
-                                question={ QUIZ[currentQuestionIndex].question }
-                                answers={ QUIZ[currentQuestionIndex].answers }
+                                question={ quiz[currentQuestionIndex].question }
+                                answers={ quiz[currentQuestionIndex].answers }
                                 selectAnswerCallback={ selectAnswer }
                             />
                         </div>
