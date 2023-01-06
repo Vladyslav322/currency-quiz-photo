@@ -1,5 +1,5 @@
 import { QUIZ } from '../constants';
-import { actionTypes } from './actionsType';
+import { actionTypes } from './actions-type';
 
 const initState = {
     data: QUIZ,

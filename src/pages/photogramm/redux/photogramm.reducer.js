@@ -1,5 +1,5 @@
 import { CATEGORIES, IMAGES } from '../constants';
-import { actionsTypes } from './actionsTypes';
+import { actionsTypes } from './actions-types';
 
 const initState = {
     images: IMAGES,

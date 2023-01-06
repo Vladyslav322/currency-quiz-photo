@@ -1,4 +1,4 @@
-import { actionTypes } from './actionsType';
+import { actionTypes } from './actions-type';
 
 export const changeQuestion = () => ({
     type: actionTypes.changeQuestion,

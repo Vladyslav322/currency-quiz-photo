@@ -1,5 +1,5 @@
 import { CURRENCIES, CURRENCY_RATES } from '../constants';
-import { actionType } from './actionsType';
+import { actionType } from './actions-type';
 
 const initState = {
     currencies: CURRENCIES,

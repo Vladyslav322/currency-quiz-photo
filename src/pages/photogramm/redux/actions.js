@@ -1,4 +1,4 @@
-import { actionsTypes } from './actionsTypes';
+import { actionsTypes } from './actions-types';
 
 export const filterImages = (images) => ({
     type: actionsTypes.filterImages,

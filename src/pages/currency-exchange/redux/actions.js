@@ -1,4 +1,4 @@
-import { actionType } from './actionsType';
+import { actionType } from './actions-type';
 
 export const reverseCurrencies = () => ({
     type: actionType.reverseCurrencies,
