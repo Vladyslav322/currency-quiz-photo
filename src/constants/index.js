@@ -1,5 +1,5 @@
-import { Router } from './router';
+import { ROUTES } from './router';
 
 export {
-    Router,
+    ROUTES,
 };

@@ -8,10 +8,11 @@ import { addTotalScore, changeQuestion, takeQuizAgain } from '../../redux/action
 import { currentQuestionSelector, quizSelector, totalScoreSelector } from '../../redux/selectors';
 
 const Quiz = () => {
+    const dispatch = useDispatch();
+
     const quiz = useSelector(quizSelector);
     const totalScore = useSelector(totalScoreSelector);
     const currentQuestionIndex = useSelector(currentQuestionSelector);
-    const dispatch = useDispatch();
 
     const nextQuestion = () => dispatch(changeQuestion());
 
