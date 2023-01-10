@@ -1,6 +1,7 @@
 {
   "name": "currency-quiz-photo",
   "version": "0.1.0",
+  "homepage": "https://github.com/Vladyslav322/currency-quiz-photo",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
