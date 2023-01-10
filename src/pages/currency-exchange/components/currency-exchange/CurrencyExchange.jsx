@@ -30,13 +30,15 @@ const CurrencyExchange = () => {
 
     const handleReverseCurrencies = () => dispatch(reverseCurrencies());
 
+    const getRate = () => currencyFrom === currencyTo ? 1 : currencyRates[buildRateKey(currencyFrom, currencyTo)];
+
     const currencyFromChange = (amount) => {
         setAmountFrom(amount);
 
         if (!amount) {
             setAmountTo('');
         } else {
-            const rate = currencyFrom === currencyTo ? 1 : currencyRates[buildRateKey(currencyFrom, currencyTo)];
+            const rate = getRate();
             const amountTo = amount * rate;
 
             setAmountTo(amountTo);
@@ -49,7 +51,7 @@ const CurrencyExchange = () => {
         if (!amount) {
             setAmountFrom('');
         } else {
-            const rate = currencyRates[buildRateKey(currencyTo, currencyFrom)];
+            const rate = getRate();
             const amountFrom = amount * rate;
 
             setAmountFrom(amountFrom);
