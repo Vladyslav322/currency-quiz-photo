@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vladyslav322/currency-quiz-photo/static/css/main.297a7951.css",
-    "main.js": "/Vladyslav322/currency-quiz-photo/static/js/main.5ba8d33e.js",
+    "main.js": "/Vladyslav322/currency-quiz-photo/static/js/main.3199871a.js",
     "static/media/minion.gif": "/Vladyslav322/currency-quiz-photo/static/media/minion.04366d69254f3e839b0d.gif",
     "static/media/partying-face.svg": "/Vladyslav322/currency-quiz-photo/static/media/partying-face.59d63daa61540b5ce24ca56ffe557c7a.svg",
     "static/media/exploding-head.svg": "/Vladyslav322/currency-quiz-photo/static/media/exploding-head.812575332c1cb7e0a56a0a6140789af7.svg",
@@ -12,10 +12,10 @@
     "static/media/button.svg": "/Vladyslav322/currency-quiz-photo/static/media/button.d81ab0a78622d13bede03182b7d7e57c.svg",
     "index.html": "/Vladyslav322/currency-quiz-photo/index.html",
     "main.297a7951.css.map": "/Vladyslav322/currency-quiz-photo/static/css/main.297a7951.css.map",
-    "main.5ba8d33e.js.map": "/Vladyslav322/currency-quiz-photo/static/js/main.5ba8d33e.js.map"
+    "main.3199871a.js.map": "/Vladyslav322/currency-quiz-photo/static/js/main.3199871a.js.map"
   },
   "entrypoints": [
     "static/css/main.297a7951.css",
-    "static/js/main.5ba8d33e.js"
+    "static/js/main.3199871a.js"
   ]
 }
