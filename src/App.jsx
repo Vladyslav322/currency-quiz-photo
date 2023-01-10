@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { CurrencyExchange, PhotoGramm, QuizApp } from './pages'
 import { NavigationBar } from './shared-components';
+import { ROUTES } from './constants';
 
 const App = () => {
     return (
@@ -9,9 +10,9 @@ const App = () => {
 
             <Routes>
                 <Route exact path="/" element={ <CurrencyExchange/> }/>
-                <Route exact path="/CurrencyExchange" element={ <CurrencyExchange/> }/>
-                <Route exact path="/QuizApp" element={ <QuizApp/> }/>
-                <Route exact path="/PhotoGramm" element={ <PhotoGramm/> }/>
+                <Route exact path={ROUTES.currencyExchange} element={ <CurrencyExchange/> }/>
+                <Route exact path={ROUTES.quiz} element={ <QuizApp/> }/>
+                <Route exact path={ROUTES.photogramm} element={ <PhotoGramm/> }/>
             </Routes>
         </div>
     );

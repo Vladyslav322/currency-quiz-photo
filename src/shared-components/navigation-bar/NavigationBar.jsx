@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './NavigationBar.module.scss';
+import { ROUTES } from '../../constants';
 
 const NavigationBar = () => {
     return (
@@ -8,13 +9,13 @@ const NavigationBar = () => {
             <nav className={classes.nav__container}>
                 <ul className={classes.nav__items}>
                     <li className={classes.nav__item}>
-                        <NavLink to="/CurrencyExchange">Currency</NavLink>
+                        <NavLink to={ROUTES.currencyExchange}>Currency</NavLink>
                     </li>
                     <li className={classes.nav__item}>
-                        <NavLink to="/QuizApp">Quiz</NavLink>
+                        <NavLink to={ROUTES.quiz}>Quiz</NavLink>
                     </li>
                     <li className={classes.nav__item}>
-                        <NavLink to="/PhotoGramm">PhotoGramm</NavLink>
+                        <NavLink to={ROUTES.photogramm}>PhotoGramm</NavLink>
                     </li>
                 </ul>
             </nav>
