@@ -1,5 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { CurrencyExchange, PhotoGramm, QuizApp } from './pages'
+import { ROUTES } from './constants';
 import { NavigationBar } from './shared-components';
 
 const App = () => {
@@ -8,10 +9,10 @@ const App = () => {
             <NavigationBar/>
 
             <Routes>
-                <Route extra path="/" element={ <CurrencyExchange/> }/>
-                <Route path="/currencyExchange"  element={ <CurrencyExchange/> }/>
-                <Route path="/quiz" element={ <QuizApp/> }/>
-                <Route path="/photogramm" element={ <PhotoGramm/> }/>
+                <Route path="/" element={ <Navigate to={ ROUTES.currencyExchange }/> }/>
+                <Route path={ ROUTES.currencyExchange } element={ <CurrencyExchange/> }/>
+                <Route path={ ROUTES.quiz } element={ <QuizApp/> }/>
+                <Route path={ ROUTES.photogramm } element={ <PhotoGramm/> }/>
             </Routes>
         </div>
     );

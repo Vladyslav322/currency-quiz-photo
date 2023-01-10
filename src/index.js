@@ -9,7 +9,7 @@ import { store } from './pages/root-reducer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={ store }>
-        <BrowserRouter basename="/currencyExchange">
+        <BrowserRouter>
             <App/>
         </BrowserRouter>
     </Provider>
