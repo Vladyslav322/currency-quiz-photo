@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Vladyslav322/currency-quiz-photo/static/css/main.297a7951.css",
-    "main.js": "/Vladyslav322/currency-quiz-photo/static/js/main.5ba8d33e.js",
-    "static/media/minion.gif": "/Vladyslav322/currency-quiz-photo/static/media/minion.04366d69254f3e839b0d.gif",
-    "static/media/partying-face.svg": "/Vladyslav322/currency-quiz-photo/static/media/partying-face.59d63daa61540b5ce24ca56ffe557c7a.svg",
-    "static/media/exploding-head.svg": "/Vladyslav322/currency-quiz-photo/static/media/exploding-head.812575332c1cb7e0a56a0a6140789af7.svg",
-    "static/media/hugging-face.svg": "/Vladyslav322/currency-quiz-photo/static/media/hugging-face.dcccfbc598991a1c2a7ad4515fb6d5d1.svg",
-    "static/media/cowboy-hat-face.svg": "/Vladyslav322/currency-quiz-photo/static/media/cowboy-hat-face.7a2b6dc1c3cf6e150f08c637e0f3c185.svg",
-    "static/media/ipad.svg": "/Vladyslav322/currency-quiz-photo/static/media/ipad.096f41bab6eb90585d486c40f3c53bfb.svg",
-    "static/media/anguished-face.svg": "/Vladyslav322/currency-quiz-photo/static/media/anguished-face.63673610beeb189a75b476592c3beab7.svg",
-    "static/media/button.svg": "/Vladyslav322/currency-quiz-photo/static/media/button.d81ab0a78622d13bede03182b7d7e57c.svg",
-    "index.html": "/Vladyslav322/currency-quiz-photo/index.html",
-    "main.297a7951.css.map": "/Vladyslav322/currency-quiz-photo/static/css/main.297a7951.css.map",
-    "main.5ba8d33e.js.map": "/Vladyslav322/currency-quiz-photo/static/js/main.5ba8d33e.js.map"
+    "main.css": "/currency-quiz-photo/static/css/main.297a7951.css",
+    "main.js": "/currency-quiz-photo/static/js/main.a5c73afe.js",
+    "static/media/minion.gif": "/currency-quiz-photo/static/media/minion.04366d69254f3e839b0d.gif",
+    "static/media/partying-face.svg": "/currency-quiz-photo/static/media/partying-face.59d63daa61540b5ce24ca56ffe557c7a.svg",
+    "static/media/exploding-head.svg": "/currency-quiz-photo/static/media/exploding-head.812575332c1cb7e0a56a0a6140789af7.svg",
+    "static/media/hugging-face.svg": "/currency-quiz-photo/static/media/hugging-face.dcccfbc598991a1c2a7ad4515fb6d5d1.svg",
+    "static/media/cowboy-hat-face.svg": "/currency-quiz-photo/static/media/cowboy-hat-face.7a2b6dc1c3cf6e150f08c637e0f3c185.svg",
+    "static/media/ipad.svg": "/currency-quiz-photo/static/media/ipad.096f41bab6eb90585d486c40f3c53bfb.svg",
+    "static/media/anguished-face.svg": "/currency-quiz-photo/static/media/anguished-face.63673610beeb189a75b476592c3beab7.svg",
+    "static/media/button.svg": "/currency-quiz-photo/static/media/button.d81ab0a78622d13bede03182b7d7e57c.svg",
+    "index.html": "/currency-quiz-photo/index.html",
+    "main.297a7951.css.map": "/currency-quiz-photo/static/css/main.297a7951.css.map",
+    "main.a5c73afe.js.map": "/currency-quiz-photo/static/js/main.a5c73afe.js.map"
   },
   "entrypoints": [
     "static/css/main.297a7951.css",
-    "static/js/main.5ba8d33e.js"
+    "static/js/main.a5c73afe.js"
   ]
 }
